@@ -5,3 +5,4 @@
 
 * Alle BSC-Resources Dateien hinzugefügt
 * Readme erweitert
+* update stage.less
