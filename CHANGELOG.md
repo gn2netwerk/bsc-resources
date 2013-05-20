@@ -3,5 +3,5 @@
 
 ### 2.2
 
-* Alle bsc-resources Dateien hinzugefügt / Add all bsc-resources files to github repo
-* Readme erweitert / Updated Readme
+* Alle BSC-Resources Dateien hinzugefügt
+* Readme erweitert
