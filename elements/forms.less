@@ -1,19 +1,19 @@
-// basecondition ~ forms v2.2.0
+// basecondition ~ forms v2.2.1
 // copyright 2013 ~ Joachim Doerr ~ hello@basecondition.com 
 // licensed under MIT or GPLv3 ~ git.io/n23c3Q
 
 // ----------------------------------------------------- ~ forms
-// #forms > .default-form ();
+//  #forms > .default-form ();
 
 #forms {
   .default-form () {
     form {
       #unset > .distances ();
       
-      margin: 0 0 @base-distance;
+      margin: 0 0 20px;
       
       #form > .font-shorthand ( 13px, normal, 15px );
-      #form > .input-text ( #999, #ff0000, @base-font-family );
+      #form > .input-text ( #999, #ff0000 );
       #form > .input-border ( #ccc, #eee, 3px );
       #form > .input-background ( #f5f5f5, #f9f9f9 );
       
@@ -27,16 +27,16 @@
         
         display: block;
         width: 100%;
-        margin-bottom: @base-distance;
-        font-size: @base-font-size * 1.5;
-        line-height: @base-line-height * 2;
-        color: @gray-dark;
+        margin-bottom: 20px;
+        font-size: 13px * 1.5;
+        line-height: 15px * 2;
+        color: #333;
         border: 0;
         border-bottom: 1px solid #e5e5e5;
       
         small {
-          font-size: @base-line-height * .75;
-          color: @gray-light;
+          font-size: 15px * .75;
+          color: #999;
         }
       }
       label {
@@ -56,9 +56,9 @@
           #display > .inline-block ();
           
           display: inline-block;
-          height: @base-line-height;
+          height: 15px;
           padding: 4px 6px;
-          margin-bottom: @base-line-height / 2;
+          margin-bottom: 15px / 2;
           vertical-align: middle;
         }
         &[type="file"] {

@@ -1,4 +1,4 @@
-// basecondition ~ shadow v2.2.0
+// basecondition ~ shadow v2.2.1
 // copyright 2013 ~ Joachim Doerr ~ hello@basecondition.com 
 // licensed under MIT or GPLv3 ~ git.io/n23c3Q
 
@@ -23,7 +23,7 @@
     @val: @x @y @blur @rgba;
     #box > .box-shadow ( inset @val );
   }
-  .shadow ( @x, @y, @blur, @color : #000, @alpha : 1 ) {
+  .shadow ( @x, @y, @blur, @color : @white, @alpha : 1 ) {
     #box > .box-shadow-core ( @x, @y, @blur, @color, @alpha, box );
   }
   .shadow-inset ( @x, @y, @blur, @color : #000, @alpha : 1 ) {

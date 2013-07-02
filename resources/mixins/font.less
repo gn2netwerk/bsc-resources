@@ -1,4 +1,4 @@
-// basecondition ~ font v2.2.0
+// basecondition ~ font v2.2.1
 // copyright 2013 ~ Joachim Doerr ~ hello@basecondition.com 
 // licensed under MIT or GPLv3 ~ git.io/n23c3Q
 
@@ -9,7 +9,7 @@
 //  #font > .shorthand ( 12px, normal, 1.4em );
 
 #font {
-  .font-face ( @font-name, @font-path, @font-file-name, @font-weight : 'normal', @font-style : normal, @include-svg : false, @format : embedded-opentype ) when ( @include-svg ) {
+  .font-face ( @font-name, @font-path, @font-file-name, @font-weight : normal, @font-style : normal, @include-svg : false, @format : embedded-opentype ) when ( @include-svg ) {
     @font-face {
       font-family: @font-name;
       src: url("@{font-path}/@{font-file-name}.eot");
@@ -21,7 +21,7 @@
       font-style: normal;
     }
   }
-  .font-face ( @font-name, @font-path, @font-file-name, @font-weight : 'normal', @font-style : normal, @include-svg : false, @format : embedded-opentype ) when not ( @include-svg ) {
+  .font-face ( @font-name, @font-path, @font-file-name, @font-weight : normal, @font-style : normal, @include-svg : false, @format : embedded-opentype ) when not ( @include-svg ) {
     @font-face {
       font-family: @font-name;
       src: url("@{font-path}/@{font-file-name}.eot");

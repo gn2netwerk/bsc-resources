@@ -1,6 +1,12 @@
-// basecondition ~ screen v2.2.0
+// basecondition ~ screen v2.2.1
 // copyright 2013 ~ Joachim Doerr ~ hello@basecondition.com 
 // licensed under MIT or GPLv3 ~ git.io/n23c3Q
+
+// ----------------------------------------------------- ~ fonts
+@sans-font-family               : "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
+@serif-font-family              : Georgia, "Times New Roman", Times, serif;
+@lucida-font-family             : "Lucida Sans Unicode", "Lucida Grande", Helvetica, sans-serif;
+@mono-font-family               : Monaco, Menlo, Consolas, "Courier New", monospace;
 
 // ----------------------------------------------------- ~ import lib
 @import "vendor/normalize";
@@ -16,14 +22,14 @@
 }
 
 // ----------------------------------------------------- ~ author's custom styles
+#base > .html-body ( #fafafa, #333, @sans-font-family );
 #page {
   #base > .sticky-footer ( 200px, 500px, 40px, main );
 }
-
 section {
   #unset > .distances ();
 }
-main {
+#main {
   header {
   }
   article {

@@ -1,4 +1,4 @@
-## Basecondition LESS-Framework 2.2 - BSC-Resources
+## Basecondition LESS-Framework 2.2.1 - BSC-Resources
 
 ### Was ist Basecondition?
 
