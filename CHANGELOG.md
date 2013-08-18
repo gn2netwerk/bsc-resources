@@ -1,5 +1,10 @@
 ## Basecondition Resources Changelog
 
+### 2.2.2.rc-1
+
+* font import correction
+* icon element correction
+
 ### 2.2.2
 
 * add GN2 code standards
