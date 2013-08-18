@@ -1,5 +1,9 @@
 ## Basecondition Resources Changelog
 
+### 2.2.2.rc-2
+
+* grid mixin correction
+
 ### 2.2.2.rc-1
 
 * font import correction
