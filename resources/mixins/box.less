@@ -1,32 +1,72 @@
-// basecondition ~ less-framework ~ v2.2.2
+// basecondition ~ less-framework ~ v2.2.3
 // copyright 2013 ~ Joachim Doerr ~ hello@basecondition.com 
 // licensed under MIT or GPLv3 ~ git.io/OJYZgw
 
-// ----------------------------------------------------- ~ shadow
+// ----------------------------------------------------- ~ box
+// #box > .shadow-inception(0px 2px 15px rgba(0,0,0,0.9));
 // #box > .shadow(0, 0, 15px, #000, 0.9);
 // #box > .shadow-inset(0, 0, 5px, #000, 0.9);
-// #box > .text-shadow(0, 1px, 0, #000, 0.5);
+// #box > .sizing(border-box);
+// #box > .reflect();
+// #box > .reflect(20%, 0.2);
+
+// @namespace: #box
 
 #box {
-    .box-shadow(@val) {
-        -webkit-box-shadow: @val;
-           -moz-box-shadow: @val;
-                box-shadow: @val;
+    
+    // @methode: .shadow-inception
+    // @usage: #box > .shadow-inception(0px 2px 15px rgba(0,0,0,0.9));
+    
+    .shadow-inception(@var) {
+        -webkit-box-shadow: @var;
+           -moz-box-shadow: @var;
+                box-shadow: @var;
     }
-    .box-shadow-core(@x, @y, @blur, @color, @alpha, @typ) when (@typ = box) {
-        @rgba: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-        @val: @x @y @blur @rgba;
-        #box > .box-shadow(@val);
+    
+    // @methode: .shadow-core
+    // @usage: #box > .shadow-core(0, 0, 15px, #000, 0.9, box);
+    // @usage: #box > .shadow-core(0, 0, 15px, #000, 0.9, shadow-inset);
+    
+    .shadow-core(@var-x, @var-y, @var-blur, @var-color, @var-alpha, @var-typ) when (@var-typ = shadow) {
+        @var-rgba: hsla(hue(@var-color), saturation(@var-color), lightness(@var-color), @var-alpha);
+        @var: @var-x * 1px @var-y * 1px @var-blur * 1px @var-rgba;
+        #box > .shadow-inception(@var);
     }
-    .box-shadow-core(@x, @y, @blur, @color, @alpha, @typ) when (@typ = inset) {
-        @rgba: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
-        @val: @x @y @blur @rgba;
-        #box > .box-shadow(inset @val);
+    .shadow-core(@var-x, @var-y, @var-blur, @var-color, @var-alpha, @var-typ) when (@var-typ = shadow-inset) {
+        @var-rgba: hsla(hue(@var-color), saturation(@var-color), lightness(@var-color), @var-alpha);
+        @var: @var-x * 1px @var-y * 1px @var-blur * 1px @var-rgba;
+        #box > .shadow-inception(inset @var);
     }
-    .shadow(@x, @y, @blur, @color : @white, @alpha : 1) {
-        #box > .box-shadow-core(@x, @y, @blur, @color, @alpha, box);
+    
+    // @methode: .shadow
+    // @usage: #box > .shadow(0, 0, 15px, #000, 0.9);
+    
+    .shadow(@var-x: 0, @var-y: 0, @var-blur: 15, @var-color: #000, @var-alpha: 1) {
+        #box > .shadow-core(@var-x, @var-y, @var-blur, @var-color, @var-alpha, shadow);
     }
-    .shadow-inset(@x, @y, @blur, @color : #000, @alpha : 1) {
-        #box > .box-shadow-core(@x, @y, @blur, @color, @alpha, inset);
+    
+    // @methode: .shadow-inset
+    // @usage: #box > .shadow-inset(0, 0, 15px, #000, 0.9);
+    
+    .shadow-inset(@var-x, @var-y, @var-blur, @var-color: #000, @var-alpha: 1) {
+        #box > .shadow-core(@var-x, @var-y, @var-blur, @var-color, @var-alpha, shadow-inset);
+    }
+    
+    // @methode: .sizing
+    // @usage: #box > .sizing(border-box);
+    
+    .sizing(@var-sizing: content-box) {
+        -webkit-box-sizing: @var-sizing;
+        -moz-box-sizing: @var-sizing;
+        -ms-box-sizing: @var-sizing;
+        box-sizing: @var-sizing;
+    }
+    
+    // @methode: .reflect
+    // @usage: #box > .reflect();
+    // @usage: #box > .reflect(20%, 0.2);
+    
+    .reflect(@var-length: 50%, @var-alpha: 0.2) {
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(@var-length, transparent), to(rgba(255, 255, 255, @var-alpha)));
     }
 }
