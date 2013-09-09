@@ -13,25 +13,21 @@
 #base {
     
     // @methode: .html
-    // @var: @var-body-background - @default-var: #fff
     // @usage: #base > .html(#fff);
     
     .html(@var-body-backgorund: #fff) {
-        #unset > .distances ();
-        #size > .square(100% );
+        #unset > .distances();
+        #size > .square(100%);
         position: relative;
         background: @var-body-backgorund;
     }
     
     // @methode: .body
-    // @vars: @var-body-background - @default-var: #fff
-    //        @var-color - @default-var: #333
-    //        @var-font-family -  @default-var: sans-serif
     // @usage: #base > .body(#fff, #444, @base-font-family);
     
     .body(@var-body-background: #fff, @var-color: #333, @var-font-family: sans-serif) {
-        #unset > .distances ();
-        #size > .square(100% );
+        #unset > .distances();
+        #size > .square(100%);
         background: @var-body-background;
         color: @var-color;
         font-family: @var-font-family;
@@ -39,10 +35,6 @@
     }
     
     // @methode: .link
-    // @vars: @var-color - @default-var: #000
-    //        @var-hover-color - @default-var: #ccc
-    //        @var-decoration -  @default-var: underline
-    //        @var-hover-decoration -  @default-var: none
     // @usage: #base > .link(#000, #ccc, underline, none);
     
     .link(@var-color: #000, @var-hover-color: #ccc, @var-decoration: underline, @var-hover-decoration: none) {
@@ -56,11 +48,6 @@
     }
     
     // @methode: .sticky-footer
-    // @vars: @var-footer-height - @default-var: 100
-    //        @var-main-min-height - @default-var: 300
-    //        @var-add-main-bottom-padding -  @default-var: 0
-    //        @var-main -  @default-var: main
-    //        @var-footer -  @default-var: footer
     // @usage: #base > .body(#fff, #444, @base-font-family);
     
     .sticky-footer(@var-footer-height: 100, @var-main-min-height: 300, @var-add-main-bottom-padding: 0, @var-main: main, @var-footer: footer) {
@@ -70,7 +57,7 @@
         #@{var-main} {
             position: relative;
             min-height: @var-main-min-height * 1px;
-            padding-bottom: ceil( @var-footer-height + @var-add-main-bottom-padding)* 1px;
+            padding-bottom: ceil(@var-footer-height + @var-add-main-bottom-padding)* 1px;
         }
         @{var-footer} {
             position: absolute;
