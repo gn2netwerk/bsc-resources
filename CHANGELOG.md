@@ -1,5 +1,12 @@
 ## Basecondition Resources Changelog
 
+### 2.2.3
+
+* filename = namespace-name
+* remove .html-body mixin
+* add .html mixin
+* add .body mixin
+
 ### 2.2.2.rc-2
 
 * grid mixin correction

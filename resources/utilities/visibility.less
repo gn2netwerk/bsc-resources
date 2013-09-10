@@ -5,7 +5,17 @@
 // ----------------------------------------------------- ~ visibility
 // #visibility > .hide-text();
 // #visibility > .invisible();
+// #visibility > .hide();
+// #visibility > .hidden();
 // #visibility > .visible();
+// #visibility > .show();
+
+// #visibility > .backface-invisible();
+// #visibility > .backface-hide();
+// #visibility > .backface-hidden();
+// #visibility > .backface-visible();
+// #visibility > .backface-show();
+
 // #visibility > .responsive();
 // #visibility > .print();
 // .hide-text();
@@ -21,8 +31,36 @@
     .invisible() {
         visibility: hidden;
     }
+    .hide {
+        #visibility > .invisible();
+    }
+    .hidden {
+        #visibility > .invisible();
+    }
     .visible() {
         visibility: visible;
+    }
+    .show {
+        #visibility > .visible();
+    }
+    .backface-invisible {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .backface-hide {
+        #visibility > .backface-invisible();
+    }
+    .backface-hidden {
+        #visibility > .backface-invisible();
+    }
+    .backface-visible {
+        -webkit-backface-visibility: visible;
+        -moz-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+    .backface-show {
+        #visibility > .backface-visible();
     }
     .responsive() {
         // IE10 metro responsive
@@ -78,6 +116,7 @@
 
 // ----------------------------------------------------- ~ display
 // #display > .hide();
+// #display > .hidden();
 // #display > .show();
 // #display > .inherit();
 // #display > .inline();
@@ -85,6 +124,9 @@
 #display {
     .hide() {
         display: none !important;
+    }
+    .hidden() {
+        #display > .hide();
     }
     .show() {
         display: block;
