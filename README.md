@@ -1,6 +1,5 @@
-## BSC-Resources
+## BSC-Resources ~ Basecondition v2.2.3
 
-### Basecondition LESS-Framework 2.2.3
 
 #### What is Basecondition?
 
