@@ -7,7 +7,8 @@ Basecondition is a LESS-Framework for the development of complex web page layout
 
 #### What contains the BSC Resources Repository?
 
-This repository contains all LESS-Mixins and Utilitie-Files from Basecondition. For using the resources without the other Basecondition components these were stored externally in the bsc-resources repository.
+This repository contains all LESS-Mixins and Utility-Files from Basecondition. This repository is for those who wish to use the resources without any of the other Basecondition components.
+
 
 #### Copyright and licence
 
